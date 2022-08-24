@@ -79,7 +79,7 @@ class Calculator: ObservableObject {
     func checkForDivision() -> Bool {
         
         if currentOp!.isDivision && (currentNumber == nil && previousNumber == 0) || (currentNumber == 0) {
-            displayValue = "Error"
+            displayValue = "Error: cannot divide by zero"
             reset()
             return true
         }
